@@ -1,0 +1,134 @@
+.nav-bar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.btns-container button {
+    background-color: var(--color-negro);
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    color: var(--color-rojo);
+    font-size: clamp(.9rem, 2vw, 1.1rem);
+    font-weight: bold;
+}
+
+.btns-container button:hover {
+    color: var(--color-blanco);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    flex: 1;
+}
+
+.input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 2px solid var(--color-rojo);
+    background-color: var(--color-negro);
+    font-weight: bold;
+    color: var(--color-blanco);
+}
+
+.input:focus {
+    outline: none;
+}
+
+button::selection,
+.input::selection {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+}
+
+.search {
+    padding: 5px;
+    cursor: pointer;
+    color: var(--color-rojo);
+}
+
+@media (max-width:1024px) {
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+}
+
+@media (max-width:560px) {
+
+    .btns-container {
+        display: grid;
+        grid-template-areas:
+            "pelicula serie accion familiar"
+            "terror terror aventura comedia"
+        ;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .pelicula {
+        grid-area: pelicula;
+    }
+
+    .serie {
+        grid-area: serie;
+    }
+
+    .accion {
+        grid-area: accion;
+    }
+
+    .familiar {
+        grid-area: familiar;
+    }
+
+    .teror {
+        grid-area: terror;
+    }
+
+    .aventura {
+        grid-area: aventura;
+        grid-column: 2/4;
+    }
+
+    .comedia {
+        grid-area: comedia;
+    }
+}
+
+@media (max-width:320px) {
+
+    .btns-container {
+        display: grid;
+        grid-template-areas:
+            "pelicula serie"
+            "accion familiar"
+            "terror aventura"
+            "comedia comedia"
+        ;
+        gap: 10px;
+    }
+
+    .aventura {
+        grid-area: aventura;
+        grid-column: 2/3;
+    }
+
+    .btns-container button {
+        margin: 0;
+        padding: 5px;
+    }
+}
