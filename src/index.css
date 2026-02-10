@@ -1,5 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+  --color-rojo: #e50914;
+  --color-blanco: #FFFFFF;
+  --color-negro: #000000;
+  --color-gris: #e3e3e3;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  background-color: var(--color-negro);
+}
+
+footer>p,
+.btns-container>button {
+  font-family: "Merriweather", serif;
 }

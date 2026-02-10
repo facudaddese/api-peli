@@ -1,24 +1,20 @@
-
 import { useFetch } from '../../hooks/useFetch';
-import { useInput } from '../../hooks/useInput';
-import Item from '../Item/Item';
+import Item from '../item/Item';
 import './MainLayout.css'
 
-const MainLayout = () => {
+const MainLayout = ({ input }) => {
 
-    const { input, handleInput } = useInput();
-    const { peliculas } = useFetch(input);
+    const { peliculas } = useFetch(input ? `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${input}&language=es` : `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}&language=es`);
 
     return (
         <main>
-            <h1>Buscá tú película favorita</h1>
-            <input type="text" value={input} placeholder='Ingrese una peliculas' onChange={handleInput} />
-            <section>
+            <section className='grid-container'>
                 {
                     peliculas.map((peli) => <Item key={peli.id} {...peli} />)
+
                 }
                 {
-                    peliculas.length === 0 && input !== "" && <h3> No se encontro la película</h3>
+                    peliculas.length === 0 && input !== "" && <h3 className='empty'> No se encontro la película</h3>
                 }
             </section>
         </main >
