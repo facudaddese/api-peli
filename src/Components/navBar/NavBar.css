@@ -14,10 +14,12 @@
     color: var(--color-rojo);
     font-size: clamp(.9rem, 2vw, 1.1rem);
     font-weight: bold;
+    transition: transform .2s ease;
 }
 
 .btns-container button:hover {
     color: var(--color-blanco);
+    transform: translateY(-2px);
 }
 
 .search-container {

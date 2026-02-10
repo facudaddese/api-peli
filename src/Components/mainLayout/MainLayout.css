@@ -7,6 +7,12 @@
     gap: 35px;
 }
 
+.main-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .empty {
     color: var(--color-rojo);
     font-family: "Merriweather", serif;
