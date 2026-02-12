@@ -1,16 +1,26 @@
+import { NavLink } from 'react-router-dom';
 import './NavBar.css'
 
-const NavBar = ({ input, handleInput }) => {
+const NavBar = ({ input, handleInput, onClick }) => {
+
+    const categories = [
+        { id: 'movie', label: 'Películas' },
+        { id: 'tv', label: 'Series' },
+        { id: 'action', label: 'Acción' },
+        { id: 'family', label: 'Familiar' },
+        { id: 'adventure', label: 'Aventura' },
+        { id: 'horror', label: 'Terror' },
+        { id: 'comedy', label: 'Comedia' }
+    ];
+
     return (
         <nav className="nav-bar">
             <div className="btns-container">
-                <button className='pelicula'>Películas</button>
-                <button className='serie'>Series</button>
-                <button className='accion'>Acción</button>
-                <button className='familiar'>Familiar</button>
-                <button className='aventura'>Aventura</button>
-                <button className='terror'>Terror</button>
-                <button className='comedia'>Comedia</button>
+                {
+                    categories.map((cat) => (
+                        <button key={cat.id} onClick={onClick} className={`${cat.label.toLowerCase()}`}>{cat.label}</button>
+                    ))
+                }
             </div>
             <div className="search-container">
                 <input type="text" value={input} placeholder='Búsqueda de películas o series' onChange={handleInput} className='input' />

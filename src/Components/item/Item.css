@@ -24,6 +24,12 @@
     padding: 10px 5px;
 }
 
+.movie-title::selection,
+.overview::selection {
+    color: var(--color-blanco);
+    background: var(--color-rojo);
+}
+
 .img-container {
     display: flex;
     justify-content: center;

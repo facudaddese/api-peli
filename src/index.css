@@ -25,3 +25,9 @@ footer>p,
 .btns-container>button {
   font-family: "Merriweather", serif;
 }
+
+h1,
+h2,
+.overview {
+  font-family: 'Lora', serif;
+}

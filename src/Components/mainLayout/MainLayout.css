@@ -1,3 +1,10 @@
+.main-title {
+    text-align: center;
+    color: var(--color-rojo);
+    padding: 15px;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -7,13 +14,13 @@
     gap: 35px;
 }
 
-.main-empty {
+.empty-main {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.empty {
+.empty-title {
     color: var(--color-rojo);
     font-family: "Merriweather", serif;
     font-size: clamp(1.1rem, 3.1vw, 1.7rem);

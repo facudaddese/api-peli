@@ -1,12 +1,12 @@
-// import { Link } from 'react-router-dom'
-import NavBar from '../navBar/NavBar'
 import './Header.css'
+import NavBar from '../navBar/NavBar'
 
-const Header = ({ title, input, handleInput }) => {
+const Header = ({ title, input, handleInput, onClick }) => {
+
     return (
         <header>
-            <h1>{title}</h1>
-            <NavBar input={input} handleInput={handleInput} />
+            <button className='btn-h1' onClick={onClick}><h1>{title}</h1></button>
+            <NavBar input={input} handleInput={handleInput} onClick={onClick} />
         </header>
     )
 }

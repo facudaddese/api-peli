@@ -1,25 +1,24 @@
+import './MainLayout.css'
 import { useRef } from 'react';
-import { useFetch } from '../../hooks/useFetch';
 import { useStyle } from '../../hooks/useStyle';
 import Item from '../item/Item';
-import './MainLayout.css'
 
-const MainLayout = ({ input, containerRef }) => {
-
-    const { peliculas } = useFetch(input ? `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${input}&language=es` : `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}&language=es`);
+const MainLayout = ({ input, containerRef, contenido }) => {
 
     const mainRef = useRef();
-
-    useStyle(peliculas, input, containerRef, mainRef);
+    useStyle(contenido, input, containerRef, mainRef);
 
     return (
         <main ref={mainRef}>
+            {
+                // contenido.length !== 0 && input === "" && <h2 className='main-title'> Próximos estrenos</h2>
+            }
             <section className='grid-container'>
                 {
-                    peliculas.map((peli) => <Item key={peli.id} {...peli} />)
+                    contenido.map((peli) => <Item key={peli.id} {...peli} />)
                 }
                 {
-                    peliculas.length === 0 && input !== "" && <h3 className='empty'>No hay resultados para tu búsqueda</h3>
+                    contenido.length === 0 && input !== "" && <h3 className='empty-title'>No hay resultados para tu búsqueda</h3>
                 }
             </section>
         </main >

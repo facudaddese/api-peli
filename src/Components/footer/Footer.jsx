@@ -15,7 +15,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <p>&copy; 2026 Peliculas - API | Desarrollada por <a href="https://www.linkedin.com/in/facundodaddese/" target="_blank" rel="noopener noreferrer" className='ancor-footer'>Facundo D'addese.</a></p>
+            <p>&copy; 2026 API de películas | Desarrollada por <a href="https://www.linkedin.com/in/facundodaddese/" target="_blank" rel="noopener noreferrer" className='ancor-footer'>Facundo D'addese.</a></p>
         </footer>
     )
 }

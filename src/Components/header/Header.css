@@ -5,11 +5,20 @@ header {
     gap: 2rem;
 }
 
-header h1 {
-    font-family: "Lora", serif;
+.btn-h1 {
+    background: var(--color-negro);
+    border: none;
+}
+
+h1 {
     color: var(--color-rojo);
     font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: bold;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: var(--color-blanco);
 }
 
 h1::selection {

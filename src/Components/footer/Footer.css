@@ -13,6 +13,11 @@ footer>p {
     text-align: center;
 }
 
+footer>p::selection{
+    background: var(--color-rojo);
+    color: var(--color-blanco);
+}
+
 .ancor-footer {
     color: var(--color-rojo);
     text-decoration: none;

@@ -19,7 +19,7 @@
 
 .btns-container button:hover {
     color: var(--color-blanco);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 .search-container {

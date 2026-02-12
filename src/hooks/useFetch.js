@@ -2,20 +2,20 @@ import { useState, useEffect } from "react";
 
 export const useFetch = (url) => {
 
-    const [peliculas, setPeliculas] = useState([]);
+    const [contenido, setContenido] = useState([]);
 
     useEffect(() => {
-        const getPeliculas = async () => {
+        const getContenido = async () => {
             try {
                 const res = await fetch(url)
                 const data = await res.json()
-                setPeliculas(data.results || []);
+                setContenido(data.results || []);
             } catch (error) {
                 console.log(error);
             }
         }
-        getPeliculas();
+        getContenido();
     }, [url]);
 
-    return { peliculas }
+    return { contenido }
 }

@@ -1,18 +1,17 @@
 import { useEffect } from "react"
 
-export const useStyle = (peliculas, input, containerRef, mainRef) => {
+export const useStyle = (contenido, input, containerRef, mainRef) => {
 
     useEffect(() => {
-
         if (!containerRef) return;
         if (!mainRef) return;
 
-        if (peliculas.length === 0 && input !== "") {
+        if (contenido.length === 0 && input !== "") {
             containerRef.current.style.height = "100dvh";
-            mainRef.current.classList.add("main-empty");
+            mainRef.current.classList.add("empty-main");
         } else {
             containerRef.current.style.height = "100%";
-            mainRef.current.classList.remove("main-empty");
+            mainRef.current.classList.remove("empty-main");
         }
-    }, [peliculas, input, containerRef, mainRef])
+    }, [contenido, input, containerRef, mainRef])
 }
