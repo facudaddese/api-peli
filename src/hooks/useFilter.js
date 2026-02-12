@@ -21,5 +21,5 @@ export const useFilter = ({ input }) => {
                                         `https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_API_KEY}&language=es`
     );
 
-    return { handleCategory, contenido }
+    return { handleCategory, contenido, category }
 }

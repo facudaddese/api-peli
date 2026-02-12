@@ -13,7 +13,7 @@ header {
 h1 {
     color: var(--color-rojo);
     font-size: clamp(2rem, 6vw, 3.5rem);
-    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 h1:hover {

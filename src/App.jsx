@@ -9,12 +9,12 @@ function App() {
 
   const { input, handleInput } = useInput();
   const containerRef = useRef();
-  const { handleCategory, contenido } = useFilter({ input });
+  const { handleCategory, contenido, category } = useFilter({ input });
 
   return (
     <div className='container' ref={containerRef}>
       <Header title="PELISAPI" input={input} handleInput={handleInput} onClick={handleCategory} />
-      <MainLayout input={input} containerRef={containerRef} contenido={contenido} />
+      <MainLayout input={input} containerRef={containerRef} contenido={contenido} category={category} />
       <Footer />
     </div>
   )

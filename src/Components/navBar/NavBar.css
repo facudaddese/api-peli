@@ -14,6 +14,8 @@
     color: var(--color-rojo);
     font-size: clamp(.9rem, 2vw, 1.1rem);
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: transform .2s ease;
 }
 
@@ -79,6 +81,7 @@ button::selection,
         align-items: center;
         justify-content: center;
         justify-items: center;
+        gap: 10px;
     }
 
     .pelicula {
