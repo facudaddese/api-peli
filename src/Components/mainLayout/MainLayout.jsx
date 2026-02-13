@@ -10,7 +10,9 @@ const MainLayout = ({ input, containerRef, contenido, category }) => {
 
     return (
         <main ref={mainRef}>
-            <h2 className='main-title' style={{ display: category === null && "block" }}>{category === null || category === "PELISAPI" ? "Próximos estrenos" : category}</h2>
+            <h2 className='main-title' style={{ display: category === null || contenido.length !== 0 ? "block" : 'none' }}>{
+                category === null || category === "PELISAPI" ? 'Próximos estrenos' : category !== "PELISAPI" ? category : input.value !== "" && ''
+            }</h2>
 
             <section className='grid-container'>
                 {
