@@ -10,8 +10,8 @@ const MainLayout = ({ input, containerRef, contenido, category }) => {
 
     return (
         <main ref={mainRef}>
-            <h2 className='main-title' style={{ display: category === null || contenido.length !== 0 ? "block" : 'none' }}>{
-                category === null || category === "PELISAPI" ? 'Próximos estrenos' : category !== "PELISAPI" ? category : input.value !== "" && ''
+            <h2 className='main-title' style={{ display: contenido.length > 0 ? "block" : 'none' }}>{
+                input !== '' ? "Resultados de tu búsqueda" : category === null || category === "PELISAPI" ? 'Próximos estrenos' : category !== "PELISAPI" ? category : ''
             }</h2>
 
             <section className='grid-container'>
@@ -19,7 +19,7 @@ const MainLayout = ({ input, containerRef, contenido, category }) => {
                     contenido.map((peli) => <Item key={peli.id} {...peli} />)
                 }
                 {
-                    contenido.length === 0 && input !== "" && <h3 className='empty-title'>No hay resultados para tu búsqueda</h3>
+                    contenido.length === 0 && <h3 className='empty-title'>No hay resultados para tu búsqueda</h3>
                 }
             </section>
         </main >
