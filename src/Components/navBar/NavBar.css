@@ -19,7 +19,7 @@
         align-items: center;
         justify-content: center;
         justify-items: center;
-        gap: 5px;
+        row-gap: 10px;
     }
 
     .pelicula {
@@ -52,7 +52,7 @@
     }
 }
 
-@media (max-width:427px) {
+@media (max-width:425px) {
     .btns-container {
         display: grid;
         grid-template-areas:
@@ -61,7 +61,7 @@
             "terror aventura"
             "comedia comedia"
         ;
-        gap: 10px;
+        column-gap: 7px;
     }
 
     .aventura {
