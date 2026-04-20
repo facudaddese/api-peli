@@ -1,7 +1,7 @@
 
 # API de películas y series
 
-Aplicación web de catálogo de películas y series construida con **React**. Permite explorar contenido mediante filtros por género y tipo, con búsqueda integrada y carga dinámica de datos desde **The Movie Database (TMDB)**. [Ver sitio](https://pelis-api.netlify.app/)
+Aplicación web de catálogo de películas y series construida con **React** & **Tailwind CSS**. Permite explorar contenido mediante filtros por género y tipo, con búsqueda integrada y carga dinámica de datos desde **The Movie Database (TMDB)**. [Ver sitio](https://pelis-api.netlify.app/)
 
 ---
 
@@ -23,7 +23,7 @@ Aplicación web de catálogo de películas y series construida con **React**. Pe
 ## Tecnologías utilizadas
 
 - HTML5
-- CSS3
+- Tailwind CSS
 - JavaScript (ES6+)
 - React (Custom Hooks)
 -  Fetch API & Async/Await
