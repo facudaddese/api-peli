@@ -52,7 +52,7 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:427px) {
     .btns-container {
         display: grid;
         grid-template-areas:
