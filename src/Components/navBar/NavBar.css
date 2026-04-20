@@ -1,65 +1,4 @@
-.nav-bar {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    justify-content: space-between;
-    flex: 1;
-}
-
-.btns-container button {
-    background-color: var(--color-negro);
-    border: none;
-    cursor: pointer;
-    margin-right: 15px;
-    color: var(--color-rojo);
-    font-size: clamp(.9rem, 2vw, 1.1rem);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: transform .2s ease;
-}
-
-.btns-container button:hover {
-    color: var(--color-blanco);
-    transform: translateY(-4px);
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: 10px;
-    flex: 1;
-}
-
-.input {
-    width: 100%;
-    padding: 7px;
-    border: none;
-    border-bottom: 2px solid var(--color-rojo);
-    background-color: var(--color-negro);
-    font-weight: bold;
-    color: var(--color-blanco);
-}
-
-.input:focus {
-    outline: none;
-}
-
-button::selection,
-.input::selection {
-    background-color: var(--color-rojo);
-    color: var(--color-blanco);
-}
-
-.search {
-    padding: 5px;
-    cursor: pointer;
-    color: var(--color-rojo);
-}
-
 @media (max-width:1024px) {
-
     .nav-bar {
         flex-direction: column;
         gap: 25px;
@@ -71,7 +10,6 @@ button::selection,
 }
 
 @media (max-width:560px) {
-
     .btns-container {
         display: grid;
         grid-template-areas:
@@ -114,8 +52,7 @@ button::selection,
     }
 }
 
-@media (max-width:320px) {
-
+@media (max-width:425px) {
     .btns-container {
         display: grid;
         grid-template-areas:
@@ -135,5 +72,9 @@ button::selection,
     .btns-container button {
         margin: 0;
         padding: 5px;
+    }
+
+    input::placeholder {
+        font-size: .75rem;
     }
 }

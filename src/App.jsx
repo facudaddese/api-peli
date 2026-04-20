@@ -12,7 +12,7 @@ function App() {
   const { handleCategory, contenido, category } = useFilter({ input });
 
   return (
-    <div className='container' ref={containerRef}>
+    <div className='grid grid-rows-[auto_1fr_auto] h-full bg-(--color-negro)' ref={containerRef}>
       <Header title="PELISAPI" input={input} handleInput={handleInput} onClick={handleCategory} />
       <MainLayout input={input} containerRef={containerRef} contenido={contenido} category={category} />
       <Footer />

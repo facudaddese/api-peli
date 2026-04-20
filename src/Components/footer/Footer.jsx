@@ -1,21 +1,12 @@
-import './Footer.css'
+import IconContainer from "../iconContainer/IconContainer"
 
 const Footer = () => {
     return (
-        <footer>
-            <div className='iconos'>
-                <div className="github">
-                    <a href="https://github.com/facudaddese?tab=repositories" target="_blank" rel="noopener noreferrer" className='ancor-iconos'>
-                        <i className="devicon-github-original git-link"></i>
-                    </a>
-                </div>
-                <div className="linkedin">
-                    <a href="https://www.linkedin.com/in/facundodaddese/" target="_blank" rel="noopener noreferrer" className='ancor-iconos'>
-                        <i className="devicon-linkedin-plain git-link"></i>
-                    </a>
-                </div>
-            </div>
-            <p>&copy; 2026 API de películas | Desarrollada por <a href="https://www.linkedin.com/in/facundodaddese/" target="_blank" rel="noopener noreferrer" className='ancor-footer'>Facundo D'addese.</a></p>
+        <footer className='flex justify-center items-center flex-col flex-wrap py-8 px-4 gap-8'>
+            <IconContainer />
+            <p className='text-(--color-blanco) text-center text-[clamp(.9rem,1.7vw,1rem)] selection:bg-(--color-rojo) selection:text-(--color-blanco)'>&copy; 2026 API de películas | Desarrollada por{' '}
+                <a href="https://www.linkedin.com/in/facundodaddese/" target="_blank" rel="noopener noreferrer" className='text-(--color-rojo) no-underline font-bold hover:underline'>Facundo D'addese.</a>
+            </p>
         </footer>
     )
 }
