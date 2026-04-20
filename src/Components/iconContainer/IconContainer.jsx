@@ -1,4 +1,4 @@
-import Icon from "../icon/Icon"
+import Icon from '../icon/Icon'
 
 const IconContainer = () => {
     return (
