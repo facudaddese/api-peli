@@ -17,7 +17,7 @@ const NavBar = ({ input, handleInput, onClick }) => {
             <div className='btns-container'>
                 {
                     categories.map((cat) => (
-                        <button key={cat.id} onClick={onClick} className={`font-["Merriweather",serif] bg-(--color-negro) border-none cursor-pointer mr-4 text-(--color-rojo) text-[clamp(.9rem,2vw,1.1rem)] font-bold uppercase tracking-[1px] transition-transform duration-200 ease-in-out hover:text-(--color-blanco) hover:-translate-y-1 selection:bg-(--color-rojo) selection:text-(--color-blanco) ${cat.label.toLowerCase()} font-["Merriweather",serif]`}>{cat.label}</button>
+                        <button key={cat.id} onClick={onClick} className={`font-["Merriweather",serif] bg-(--color-negro) border-none cursor-pointer mr-4 text-(--color-rojo) text-[clamp(.9rem,2vw,1.1rem)] font-bold uppercase tracking-[1px] transition-transform duration-200 ease-in-out hover:text-(--color-blanco) hover:-translate-y-1 selection:bg-(--color-rojo) selection:text-(--color-blanco) ${cat.label.toLowerCase()} font-["Merriweather",serif] focus:text-(--color-blanco) focus:-translate-y-1`}>{cat.label}</button>
                     ))
                 }
             </div>
